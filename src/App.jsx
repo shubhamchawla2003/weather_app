@@ -14,7 +14,7 @@ export default function App() {
 
     try {
       const res = await fetch(
-        `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=yes`
+        `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=yes`
       );
       const data = await res.json();
       if (data.error) throw new Error(data.error.message);
